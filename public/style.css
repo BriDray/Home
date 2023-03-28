@@ -1,0 +1,34 @@
+/* HEADER STYLING */
+.header {
+    width: 100%;
+    height: 90px;
+    background-color: #7692AB;
+    border-bottom: 10px solid #FAD02C;
+}
+
+/* ------------------------SIGN-IN PAGE--------------------------------------- */
+/* DIV THAT HOLDS ALL THE SIGN IN PAGE INFO */
+.signInPage{
+    display: block;
+    text-align: center;
+    align-content: center;
+
+}
+
+/* FIRST TITLE (WELCOME) */
+h1 {
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+
+/* SECOND TITLE (HOME) */
+h2 {
+    font-size: 150px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+/* EMAIL TITLE */
+.emailTitle {
+    margin-top: 2px;
+}
