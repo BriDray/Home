@@ -26,7 +26,7 @@ const sess = {
   })
 };
 
-// login session middelware
+// login session middleware
 app.use(session(sess));
 
 // Inform Express.js which template engine we're using
