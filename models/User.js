@@ -1,4 +1,5 @@
-const { Model, Datatypes } = require('sequalize');
+const { Model, DataTypes } = require('sequalize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connections');
 
 class User extends Model {
