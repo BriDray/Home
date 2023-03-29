@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Sign-In Page</title>
+    <!-- Compiled and minified CSS DOCUMENTATION FROM MATERIALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="public\style.css">
 </head>
+
 <body>
-    <!-- This is the Header of the page -->
+    <!-- THIS IS THE HEADER OF THE PAGE -->
     <header class="header"></header>
-<div Class="signInPage">
-<h1>WELCOME</h1>
-<h2>HOME</h2>
-<h3 class="emailTitle">Email</h3>
-<input class="emailInput">
-<h3>Password</h3>
-<input class="PwordInput">
-<h4>Don't have an account?</h4>
-<a class="signUp">Sign-up</a>
+    <div Class="signInPage">
+    <h1>WELCOME</h1>
+    <h2><img class="homeLogo" src="./HOME.png" width="625px" height="179px"></h2>
+    <!-- SIGN IN FORM TAKEN FROM MATERIALIZE -->
+    <div class="row">
+        <form class="col s12 form">
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+        </div>
+    </div>
+    </form>
+    </div>
+    <!-- DON'T HAVE AN ACCOUNT? -->
+    <div class="signUp">
+    <h4>Don't have an account?</h4>
+    <a class="signUpA">Sign-up</a>
+    </div>
 </div>
+    <!-- Compiled and minified JavaScript FROM MATERIALIZE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

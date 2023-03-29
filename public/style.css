@@ -1,7 +1,7 @@
 /* HEADER STYLING */
 .header {
     width: 100%;
-    height: 90px;
+    height: 150px;
     background-color: #7692AB;
     border-bottom: 10px solid #FAD02C;
 }
@@ -28,7 +28,14 @@ h2 {
     margin-bottom: 5px;
 }
 
-/* EMAIL TITLE */
-.emailTitle {
-    margin-top: 2px;
+/* SIGN IN ROW POSITION AND WIDTH */
+.row {
+    width: 50%;
+    align-items: center;
+}
+
+/* SIGN UP TITLE AND ANCHOR POSITION */
+.signUp {
+text-align: center;
+font-size: 25px;
 }
