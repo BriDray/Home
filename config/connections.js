@@ -1,5 +1,5 @@
 const Sequalize = require('sequalize');
-var uniqid = require('uniqid');
+require('dotenv').config();
 
 const sequelize = new Sequelize(
     process.env.DB_NAME,
