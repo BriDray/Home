@@ -39,7 +39,11 @@ Item.init(
           model: 'user',
           key: 'id',
         },
-  },
+    },
+    purchase_from: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
 },
   {
     sequelize,
