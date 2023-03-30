@@ -46,21 +46,3 @@ sequelize.sync({ force: false }).then(() => {
   });
 
 
-// DATABASE
-// Get and post
-app.route('/api/items')
-
-// Make items list
-    .get((req, res) =>
-          res.json(database))
-
-// Add new items
-    .post((req, res) => {
-      let jsonFilePath = path.join(__dirname, './db/db.json');
-      let newNotes = ;
-
-      newNotes.id = uuidv4();
-      console.log(newNotes);
-
-      database.push(newNotes);
-    });
