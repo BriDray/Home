@@ -28,6 +28,11 @@ Item.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    category: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+     },
     user_id: {
         type: DataTypes.INTEGER,
         references: {
