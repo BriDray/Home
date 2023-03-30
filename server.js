@@ -1,8 +1,10 @@
 const express = require('express');
 const session = require('express-session');
 const expressHbs = require('express-handlebars');
-const path = require('path')
+const path = require('path');
 const routes = require('./controllers');
+const database = require("./db/db.json");
+const { v4: uuidv4 } = require('uuid');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -42,3 +44,23 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });
+
+
+// DATABASE
+// Get and post
+app.route('/api/items')
+
+// Make items list
+    .get((req, res) =>
+          res.json(database))
+
+// Add new items
+    .post((req, res) => {
+      let jsonFilePath = path.join(__dirname, './db/db.json');
+      let newNotes = ;
+
+      newNotes.id = uuidv4();
+      console.log(newNotes);
+
+      database.push(newNotes);
+    });
