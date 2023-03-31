@@ -1,11 +1,13 @@
 [
-{
-    "name": "",
-    "purchase_date": "",
-    "purchase_price": "",
-    ""
-},
-{
+    {
+        "item_name": "Bose Speakers",
+        "purchase_date": "03/30/2023",
+        "purchase_price": "120"
+    },
     
-}
+    {
+        "item_name": "32in Samsung TV",
+        "purchase_date": "02/30/2023",
+        "purchase_price": "200"
+    }
 ]
