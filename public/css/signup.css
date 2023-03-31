@@ -1,0 +1,38 @@
+/* HEADER STYLING */
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #7692AB;
+    border-bottom: 10px solid #FAD02C;
+}
+
+/* HOME LOGO IMAGE WITHIN THE HEADER */
+.homeLogo {
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD THAT HOLDS THE  */
+.account {
+    display: block;
+    text-align: center;
+}
+
+/* SIGN IN ROW POSITION AND WIDTH */
+.row {
+    width: 80%;
+}
+
+/* .upForm {
+   margin: auto;
+} */
+
+/* SIGN IN BUTTON */
+.signUpBtn {
+    display: block;
+    margin: auto;
+    width: 180px;
+    height: 45px;
+    background-color: #FAD02C;
+    font-size: 25px;
+}
