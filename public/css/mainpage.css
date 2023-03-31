@@ -1,0 +1,24 @@
+/* HEADER STYLING */
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #7692AB;
+    border-bottom: 10px solid #FAD02C;
+}
+
+/* HOME LOGO IMAGE WITHIN THE HEADER */
+.homeLogo {
+    display: flex;
+    justify-content: center;
+}
+
+/* SIGN IN BUTTON */
+.menuBtn {
+    display: block;
+    margin-top: 9px;
+    margin-left: 10px;
+    width: 60px;
+    height: 40px;
+    background-color: #FAD02C;
+    font-size: 25px;
+}

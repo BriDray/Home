@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <!-- Compiled and minified CSS documentation for Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public\css\mainpage.css">
+</head>
+<body>
+     <!-- This is the Header of the page -->
+    <header class="header">
+        <div class="homeLogo">
+            <img src="public\images\HOME.png" width="525px" height="135px">
+        </div>
+    </header>
+     <!-- POP OUT NAV/PROFILE CARD FROM MATERIALIZE -->
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="public\images\profile-banner.png">
+                </div>
+                <a href="#user"><img class="circle" src="public\images\ProfileLogo.png"></a>
+                <a href="#name"><span class="white-text name">John Doe</span></a>
+                <a href="#email"><span class="white-text email">User Email Goes Here</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">home</i>View My Lists</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">My Account</a></li>
+        <li><a href="#!"><i class="material-icons">person</i>Edit Profile</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a href="#!" class="signOut"><i class="material-icons">settings_power</i>Sign Out</a>
+        </li>
+    </ul>
+     <!-- PROFILE/MENU BUTTON -->
+    <a class="waves-effect waves-light btn menuBtn" id="profile"><i class="material-icons">menu</i></a>
+
+
+       <script src="public\js\mainpage.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
