@@ -7,8 +7,8 @@ const newFormHandler = async (event) => {
     const item_value = document.querySelector('#item_value').value.trim();
     const category = document.querySelector('#category').value.trim();
   
-    if (name && purchase_date && purchase_price && item_value &&) {
-      const response = await fetch(`/api/projects`, {
+    if (name && purchase_date && purchase_price && item_value && category) {
+      const response = await fetch(`/api/items`, {
         method: 'POST',
         body: JSON.stringify({ name, purchase_date, purchase_price, item_value, category }),
         headers: {
@@ -28,7 +28,7 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/projects/${id}`, {
+      const response = await fetch(`/api/items/${id}`, {
         method: 'DELETE',
       });
   
