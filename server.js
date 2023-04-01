@@ -3,8 +3,8 @@ const session = require('express-session');
 const expressHbs = require('express-handlebars');
 const path = require('path');
 const routes = require('./controllers');
-const database = require("./db/db.json");
-const { v4: uuidv4 } = require('uuid');
+// const database = require("./db/db.json");
+// const { v4: uuidv4 } = require('uuid');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
