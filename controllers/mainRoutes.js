@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       const allItemsData = await Item.findAll({
         include: [
           {
-            model: Item,
+            model: User,
             attributes: ['name'],
           },
         ],
@@ -32,7 +32,7 @@ router.get('/item/:id', async (req, res) => {
       const itemData = await Item.findByPk(req.params.id, {
         include: [
           {
-            model: Item,
+            model: User,
             attributes: ['name'],
           },
         ],
