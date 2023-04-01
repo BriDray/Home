@@ -2,13 +2,14 @@ const router = require('express').Router();
 const { Item, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
 // get all items
 router.get('/', async (req, res) => {
     try {
       const allItemsData = await Item.findAll({
         include: [
           {
-            model: Item,
+            model: User,
             attributes: ['name'],
           },
         ],
@@ -31,7 +32,7 @@ router.get('/item/:id', async (req, res) => {
       const itemData = await Item.findByPk(req.params.id, {
         include: [
           {
-            model: Item,
+            model: User,
             attributes: ['name'],
           },
         ],

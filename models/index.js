@@ -6,4 +6,9 @@
     onDelete: 'CASCADE'
  });
 
+ Item.hasOne(User, {
+   foreignKey: 'id',
+   onDelete: 'SET NULL'
+ })
+
  module.exports = { User, Item };

@@ -2,12 +2,14 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const name = document.querySelector('#item-name').value.trim();
+    const category = document.querySelector('#category').value.trim();
     const purchase_date = document.querySelector('#purchase_date').value.trim();
+    const purchased_from = document.querySelector('#purchased_from').value.trim();
     const purchase_price = document.querySelector('#purchase_price').value.trim();
     const item_value = document.querySelector('#item_value').value.trim();
-    const category = document.querySelector('#category').value.trim();
+    
   
-    if (name && purchase_date && purchase_price && item_value && category) {
+    if (name && category && purchase_date && purchased_from && purchase_price && item_value) {
       const response = await fetch(`/api/items`, {
         method: 'POST',
         body: JSON.stringify({ name, purchase_date, purchase_price, item_value, category }),
@@ -19,7 +21,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-        alert('Failed to create project');
+        alert('Failed to create item');
       }
     }
   };
@@ -46,5 +48,4 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('.item-list')
-    .addEventListener('click', delButtonHandler);
-  
+    .addEventListener('click', delButtonHandler);  
