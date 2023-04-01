@@ -1,13 +1,17 @@
 [
     {
-        "item_name": "Bose Speakers",
+        "name": "Bose Speakers",
         "purchase_date": "03/30/2023",
-        "purchase_price": "120"
+        "purchase_price": "120",
+        "value": "80",
+        "category": "Electronics"
     },
     
     {
-        "item_name": "32in Samsung TV",
+        "name": "32in Samsung TV",
         "purchase_date": "02/30/2023",
-        "purchase_price": "200"
+        "purchase_price": "200",
+        "value": "100",
+        "category": "Electronics"
     }
 ]
