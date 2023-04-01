@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Item, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
 // get all items
 router.get('/', async (req, res) => {
     try {

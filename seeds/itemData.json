@@ -1,17 +1,19 @@
 [
     {
         "name": "Bose Speakers",
+        "category": "Electronics",
         "purchase_date": "03/30/2023",
+        "purchased_from": "Best Buy",
         "purchase_price": "120",
-        "value": "80",
-        "category": "Electronics"
+        "value": "80"
     },
     
     {
         "name": "32in Samsung TV",
+        "category": "Electronics",
         "purchase_date": "02/30/2023",
+        "purchased_from": "Best Buy",
         "purchase_price": "200",
-        "value": "100",
-        "category": "Electronics"
+        "value": "100"
     }
 ]

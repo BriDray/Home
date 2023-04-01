@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Item extends Model {}
+class Item extends Model { }
 
 Item.init(
   {
@@ -15,42 +15,43 @@ Item.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    category: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false,
+    },
     purchase_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    purchased_from: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     purchase_price: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-         
+      type: DataTypes.INTEGER,
+      allowNull: false,
+
     },
     value: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    category: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        allowNull: false,
-     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
-    purchase_from: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
-},
+  },
   {
     sequelize,
     freezeTableName: false,
     modelName: 'item',
   },
-  
+
+
 );
 
 module.exports = Item;
