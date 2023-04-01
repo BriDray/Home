@@ -22,3 +22,18 @@
     background-color: #FAD02C;
     font-size: 25px;
 }
+
+/* ADD NEW ITEM BUTTON */
+.addNewBtn {
+    margin-top: 9px;
+    margin-right: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: #FAD02C;
+    font-size: 18px;
+}
+/* lIST STYLING */
+/* LIST TITLE */
+.collection-header {
+    text-align: center;
+}
