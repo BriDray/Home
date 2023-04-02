@@ -47,7 +47,8 @@
     <!-- PROFILE/MENU BUTTON -->
     <a class="waves-effect waves-light btn menuBtn" id="profile"><i class="material-icons">menu</i></a>
     <!-- ADD NEW ITEM BUTTON/ MODAL TRIGGER -->
-        <a class="waves-effect waves-light btn modal-trigger addNewBtn" id="addNewBtn" href="#modal1"><i class="material-icons">control_point</i>Add New Item</a>
+    <a class="waves-effect waves-light btn modal-trigger addNewBtn" id="addNewBtn" href="#modal1"><i
+            class="material-icons">control_point</i>Add New Item</a>
 
     <!-- LIST ITEMS --->
     </div>
@@ -76,9 +77,9 @@
     <div class="row section">
         <div class="col">
         </div>
-      </div>
-      <!-- Modal Structure -->
-      <div id="modal1" class="modal">
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
         <div class="row">
             <form class="col s12">
                 <div class="row">
@@ -111,23 +112,26 @@
                             <input id="cost" type="text" class="validate">
                             <label for="cost">Item Cost When Purchased</label>
                         </div>
-        <div class="modal-footer">
-            <!-- ADD NEW ITEM BUTTON/CLOSE MODAL -->
-          <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn" id="addItemBtn">Add Item</a>
-        </div>
-      </div>
+                        <div class="modal-footer">
+                            <!-- ADD NEW ITEM BUTTON/CLOSE MODAL -->
+                            <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn"
+                                id="addItemBtn">Add Item</a>
+                        </div>
+                    </div>
 
-    <!-- JQUERY -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="public\js\mainpage.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../public/js/mainpage.js"></script>
-     <script>
-                    $(document).ready(function(){
-                        $('.modal').modal();
-                    });
-                </script>
+                    <!-- JQUERY -->
+                    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                    <script src="public\js\mainpage.js"></script>
+                    <!-- Compiled and minified JavaScript -->
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                    <script src="../public/js/mainpage.js"></script>
+                    <!-- MODAL TRIGGER JS CODE -->
+                    <script>
+                        $(document).ready(function () {
+                            $('.modal').modal();
+                        });
+                    </script>
 </body>
 
 </html>
