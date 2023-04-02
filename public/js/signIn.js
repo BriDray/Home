@@ -1,3 +1,5 @@
+var signInButton = document.querySelector('#sign-in');
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -18,3 +20,5 @@ const loginFormHandler = async (event) => {
       }
     }
   };
+
+ 
