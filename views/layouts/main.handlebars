@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Compiled and minified CSS documentation for Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public\css\mainpage.css">
+</head>
+
+<body>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/mainPage">profile</a> |
+        <button id="logout">logout</button>
+        {{else}}
+        <a href="/signInPage">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/public/js/signOut.js"></script>
+  {{/if}}
+</body>
+
+</html>
