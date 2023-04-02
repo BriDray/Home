@@ -15,53 +15,6 @@ router.post('/', withAuth, async (req, res) => {
     }
   });
 
-// // get all items
-// router.get('/', async (req, res) => {
-//   try {
-//     const allItemsData = await Item.findAll({
-//       include: [
-//         {
-//           model: Item,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
-
-//     const allItems = allItemsData.map((item) => item.get({ plain: true }));
-
-//     res.render('pengding', { 
-//       allItems, 
-//       logged_in: req.session.logged_in 
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-// // get one item
-// router.get('/item/:id', async (req, res) => {
-//   try {
-//     const itemData = await Item.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: Item,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
-
-//     const item = itemData.get({ plain: true });
-
-//     res.render('item', {
-//       ...item,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-
 // Delete item
 router.delete('/:id', withAuth, async (req, res) => {
     try {
