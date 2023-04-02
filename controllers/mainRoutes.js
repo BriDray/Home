@@ -2,8 +2,20 @@ const router = require('express').Router();
 const { Item, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.get('/signInPage', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/mainPage');
+    return;
+  }
+
+  res.render('signInPage');
+});
+
+module.exports = router;
+
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/mainPage', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -13,7 +25,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('mainPage', {
       ...user,
       logged_in: true
     });
@@ -69,14 +81,3 @@ router.get('/item/:id', async (req, res) => {
   });
 
 
-router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/mainPage');
-      return;
-    }
-  
-    res.render('SignInPage');
-  });
-  
-  module.exports = router;
