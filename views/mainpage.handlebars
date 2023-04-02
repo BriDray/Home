@@ -46,10 +46,11 @@
     </ul>
     <!-- PROFILE/MENU BUTTON -->
     <a class="waves-effect waves-light btn menuBtn" id="profile"><i class="material-icons">menu</i></a>
-    <!-- ADD NEW ITEM BUTTON -->
-    <a class="waves-effect waves-light btn addNewBtn" id="addNewBtn"><i class="material-icons">control_point</i>Add
-        New Item</a>
-    <!-- List items --->
+    <!-- ADD NEW ITEM BUTTON/ MODAL TRIGGER -->
+    <a class="waves-effect waves-light btn modal-trigger addNewBtn" id="addNewBtn" href="#modal1"><i
+            class="material-icons">control_point</i>Add New Item</a>
+
+    <!-- LIST ITEMS --->
     </div>
     <ul class="collection with-header">
         <li class="collection-header">
@@ -72,11 +73,52 @@
         </li>
     </ul>
 
+    <!-- ADD NEW ITEM MODAL -->
+    <div class="row section">
+        <div class="col">
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="category" type="text" class="validate">
+                        <label for="category">Category</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="item_name" type="text" class="validate">
+                        <label for="item_name">Item Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="purchaseDate" type="text" class="validate">
+                        <label for="purchaseDate">Purchase Date</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="purchased_from" type="text" class="validate">
+                        <label for="purchased_from">Purchased From</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="serialNumber" type="text" class="validate">
+                        <label for="serialNumber">Serial Number</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cost" type="text" class="validate">
+                            <label for="cost">Item Cost When Purchased</label>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- ADD NEW ITEM BUTTON/CLOSE MODAL -->
+                            <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn"
+                                id="addItemBtn">Add Item</a>
+                        </div>
+                    </div>
 
-    <script src="\js\mainpage.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/mainpage.js"></script>
 </body>
 
 </html>
