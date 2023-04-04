@@ -12,6 +12,12 @@
     justify-content: center;
 }
 
+/* BUTTONS LOCATED AT TOP OF THE MAIN PAGE */
+.topBtns {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* SIGN IN BUTTON */
 .menuBtn {
     display: block;

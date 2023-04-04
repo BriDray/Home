@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +10,9 @@
 </head>
 
 <body>
-     {{#if logged_in}}
-        
-        
+    {{#if logged_in}}
+
+
     <!-- This is the Header of the page -->
     <header class="header">
         <div class="homeLogo">
@@ -58,11 +57,11 @@
             <h4>{{firstName}}'s Home</h4>
         </li>
 
-    {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
-     {{#each user.item as |item-name|}}
-    {{> list-items}}
-    {{/each}}
-        
+        {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
+        {{#each user.item as |item-name|}}
+        {{> list-items}}
+        {{/each}}
+
     </ul>
 
     <!-- ADD NEW ITEM MODAL -->
@@ -109,23 +108,26 @@
                             <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn"
                                 id="addItemBtn">Add Item</a>
                         </div>
-                        </form>
                     </div>
-                    <!-- JQUERY -->
-                    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                    <script src="/js/mainpage.js"></script>
-                    <!-- Compiled and minified JavaScript -->
-                    <script
-                        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-                    {{!-- <script src="../public/js/mainpage.js"></script> --}}
-                    <!-- MODAL TRIGGER JS CODE -->
-                    <script>
-                        $(document).ready(function () {
-                            $('.modal').modal();
-                        });
-                    </script>
-                    {{else}}
+                </div>
+            </form>
+        </div>
+        <!-- JQUERY -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/js/mainpage.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        {{!--
+        <script src="../public/js/mainpage.js"></script> --}}
+        <!-- MODAL TRIGGER JS CODE -->
+        <script>
+            $(document).ready(function () {
+                $('.modal').modal();
+            });
+        </script>
+        {{else}}
         <a href="/signInPage">login</a>
         {{/if}}
 </body>
+
 </html>
