@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -44,7 +42,7 @@
             <div class="divider"></div>
         </li>
         <li>
-            <a href="#!" class="signOut"><i class="material-icons">settings_power</i>Sign Out</a>
+            <a href="/api/users/signOut" class="signOut"><i class="material-icons">settings_power</i>Sign Out</a>
         </li>
     </ul>
     <!-- PROFILE/MENU BUTTON -->
@@ -75,7 +73,7 @@
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
         <div class="row">
-            <form class="col s12">
+            <form class="col s12 new-item-form">
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="category" type="text" class="validate">
@@ -111,14 +109,15 @@
                             <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn"
                                 id="addItemBtn">Add Item</a>
                         </div>
+                        </form>
                     </div>
                     <!-- JQUERY -->
                     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                    <script src="public\js\mainpage.js"></script>
+                    <script src="/js/mainpage.js"></script>
                     <!-- Compiled and minified JavaScript -->
                     <script
                         src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-                    <script src="../public/js/mainpage.js"></script>
+                    {{!-- <script src="../public/js/mainpage.js"></script> --}}
                     <!-- MODAL TRIGGER JS CODE -->
                     <script>
                         $(document).ready(function () {

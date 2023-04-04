@@ -49,10 +49,11 @@ router.post('/signin', async (req, res) => {
     }
 });
 //log out
-router.post('/signOut', (req, res) => {
+router.get('/signOut', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
-            res.status(204).end();
+            res.render('SignInPage');
+
         });
     } else {
         res.status(404).end();
