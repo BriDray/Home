@@ -19,29 +19,27 @@
         <h2><img class="homeLogo-SignIn" src="/images/HOME.png" width="625px" height="179px"></h2>
         <!-- SIGN IN FORM TAKEN FROM MATERIALIZE -->
         <div class="row">
-            <form class="col s12 form">
-        </div>
-        <div class="row">
+         <form class="col s12 form" id="signIn">
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input id="e-mail" type="email" class="validate">
                 <label for="email">Email</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
+                <input id="Password" type="password" class="validate">
                 <label for="password">Password</label>
             </div>
         </div>
+         <button class="waves-effect waves-light btn signInBtn" id="signInButton" type="submit">Sign In</button>
         </form>
     </div>
     <!-- SIGN IN BUTTON -->
-    <a class="waves-effect waves-light btn signInBtn" id="sign-in">Sign In</a>
+   
     <!-- DON'T HAVE AN ACCOUNT? -->
     <div class="signUp">
         <h4>Don't have an account?</h4>
-        <a class="signUpA">Sign-up</a>
-    </div>
+        <a class="signUpA" href="./signUpPage.handlebars">Sign-up</a>
     </div>
     <!-- Compiled and minified JavaScript FROM MATERIALIZE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
