@@ -1,7 +1,7 @@
 var signUpButton = document.querySelector('.signup-form');
 
 const signupFormHandler = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
   
     const firstName = document.querySelector('#first_name').value.trim();
     const lastName = document.querySelector('#last_name').value.trim();
@@ -16,7 +16,7 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
@@ -24,7 +24,4 @@ const signupFormHandler = async (event) => {
   };
 
   
-   signUpButton.addEventListener('click', function(){
-    // event.preventDefault();
-    signupFormHandler();
-  });
+   signUpButton.addEventListener('click', signupFormHandler);
