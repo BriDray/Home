@@ -16,6 +16,7 @@ const loginFormHandler = async () => {
     if (response.ok) {
       // document.location.replace('/');
       console.log("signed in")
+      document.location.replace('/')
     } else {
       alert('Failed to log in');
     }
@@ -34,5 +35,6 @@ const loginFormHandler = async () => {
 signInButton.addEventListener('click', function(event){
   event.preventDefault();
   loginFormHandler();
+
   
 });
