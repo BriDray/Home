@@ -47,11 +47,14 @@ router.get('/', async (req, res) => {
       });
   
       const allItems = allItemsData.map((item) => item.get({ plain: true }));
-  
+      if (req.session.logged_in){
       res.render('mainPage', { 
         allItems, 
         logged_in: req.session.logged_in 
       });
+    }else{
+      res.render('signInPage');
+    }
     } catch (err) {
       res.status(500).json(err);
     }

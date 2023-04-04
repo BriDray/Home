@@ -13,6 +13,9 @@
 </head>
 
 <body>
+     {{#if logged_in}}
+        
+        
     <!-- This is the Header of the page -->
     <header class="header">
         <div class="homeLogo">
@@ -131,5 +134,8 @@
                             $('.modal').modal();
                         });
                     </script>
+                    {{else}}
+        <a href="/signInPage">login</a>
+        {{/if}}
 </body>
 </html>

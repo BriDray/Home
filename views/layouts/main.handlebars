@@ -13,17 +13,7 @@
 </head>
 
 <body>
-    <header>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/mainPage">profile</a> |
-        <button id="logout">logout</button>
-        {{else}}
-        <a href="/signInPage">login</a>
-        {{/if}}
-      </nav>
-    </header>
+   
     <main>
       <!-- Render the sub layout -->
       {{{ body }}}
