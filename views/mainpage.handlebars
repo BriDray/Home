@@ -27,8 +27,8 @@
                     <img src="\images\profile-banner.png">
                 </div>
                 <a href="#user"><img class="circle" src="\images\ProfileLogo.png"></a>
-                <a href="#name"><span class="white-text name">{{firstName}}</span></a>
-                <a href="#email"><span class="white-text email">User Email Goes Here</span></a>
+                <a href="#name"><span class="white-text name">{{name}}</span></a>
+                <a href="#email"><span class="white-text email">{{email}}</span></a>
             </div>
         </li>
         {{!-- <li><a href="#!"><i class="material-icons">home</i>View My Lists</a></li>
@@ -36,7 +36,7 @@
             <div class="divider"></div>
         </li> --}}
         <li><a class="subheader">My Account</a></li>
-        <li><a href="#!"><i class="material-icons">person</i>Edit Profile</a></li>
+        {{!-- <li><a href="#!"><i class="material-icons">person</i>Edit Profile</a></li> --}}
         <li>
             <div class="divider"></div>
         </li>
@@ -54,7 +54,7 @@
     </div>
     <ul class="collection with-header">
         <li class="collection-header">
-            <h4>{{firstName}}'s Home</h4>
+            <h4>{{name}}'s Home</h4>
         </li>
 
         {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
