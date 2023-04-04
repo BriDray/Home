@@ -92,5 +92,6 @@ router.get('/item/:id', async (req, res) => {
   
     res.render('SignUpPage');
   });
-  
-  module.exports = router;
+
+
+ 
