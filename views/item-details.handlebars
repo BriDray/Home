@@ -2,13 +2,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITEM-DETAILS</title>
+    <title>item-details</title>
     <!-- Compiled and minified CSS documentation for Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./modal.css">
+    <link rel="stylesheet" type="text/css" href="/css/item-details.css">
 </head>
-
 <body>
     <!-- This is the Header of the page -->
     <header class="header">
@@ -17,56 +16,37 @@
         </div>
     </header>
 
-    <!-- FORM -->
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="category" type="text" class="validate">
-                    <label for="category">Category</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="item_name" type="text" class="validate">
-                    <label for="item_name">Item Name</label>
-                </div>
+    <!-- home -->
+    <a class="waves-effect waves-light btn backToListBtn" id="backToListBtn"><i
+            class="material-icons">arrow_back</i>Back To List</a>
+
+
+    <ul class="collection with-header">
+        <li class="collection-header">
+            <h4>{{item-name}}</h4>
+        </li>
+        <li class="collection-item">
+            <div class="detail">
+                <h5 class="detailTitle">Category: </h5>
+                <h5>{{category}}</h5>
             </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="purchaseDate" type="text" class="validate">
-                    <label for="purchaseDate">Purchase Date</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="purchased_from" type="text" class="validate">
-                    <label for="purchased_from">Purchased From</label>
-                </div>
+        <li class="collection-item">
+            <div class="detail">
+                <h5 class="detailTitle">Purchase Date: </h5>
+                <h5>{{purchase_date}}</h5>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="serialNumber" type="text" class="validate">
-                    <label for="serialNumber">Serial Number</label>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="cost" type="text" class="validate">
-                        <label for="cost">Item Cost When Purchased</label>
-                    </div>
-                </div>
-                <!-- ADD NEW ITEM BUTTON -->
-                <a class="waves-effect waves-light btn addItemBtn" id="addItemBtn"><i
-                        class="material-icons">control_point</i>Add Item</a>
+        <li class="collection-item">
+            <div class="detail">
+                <h5 class="detailTitle">Purchased From: </h5>
+                <h5>{{purchased_from}}</h5>
             </div>
-        </form>
-        <!-- ADD FILE/ PHOTOS SECTION -->
+        <li class="collection-item">
+            <div class="detail">
+                <h5 class="detailTitle">Purchase Price: </h5>
+                <h5>{{purchase_price}}</h5>
+            </div>
+    </ul>
 
-        <div>
-
-        </div>
-    </div>
-
-
-
-
-    <script src="./main.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

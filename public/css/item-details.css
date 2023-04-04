@@ -1,0 +1,42 @@
+/* HEADER STYLING */
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #7692AB;
+    border-bottom: 10px solid #FAD02C;
+}
+
+/* HOME LOGO IMAGE WITHIN THE HEADER */
+.homeLogo {
+    display: flex;
+    justify-content: center;
+}
+
+/* ADD ITEM BUTTON */
+.backToListBtn {
+    display: block;
+    /* margin-top: 9px;
+    margin-right: 10px; */
+    margin: 9px 10px 15px 10px;
+    width: 200px;
+    height: 40px;
+    background-color: #FAD02C;
+    font-size: 18px;
+}
+
+.collection-header{
+    text-align: center;
+}
+
+.collection {
+    width: 70%;
+    margin: auto;
+}
+
+.detail {
+    display:inline-flex;
+}
+
+.detailTitle {
+    margin-right: 5px;
+}
