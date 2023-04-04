@@ -1,3 +1,5 @@
+newItem = document.getElementById('addItemButton');
+
 // SLIDE OUT MENU
 document.addEventListener('DOMContentLoaded', function() {
     var elem = document.querySelector('.sidenav');
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   
     if (name && category && purchase_date && purchased_from && purchase_price && item_value) {
-      const response = await fetch(`/api/items`, {
+      const response = await fetch(`/`, {
         method: 'POST',
         body: JSON.stringify({ name, purchase_date, purchase_price, item_value, category }),
         headers: {
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert('Failed to create item');
       }
@@ -56,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
     .querySelector('.new-item-form')
     .addEventListener('submit', newFormHandler);
   
-  document
-    .querySelector('.item-list')
-    .addEventListener('click', delButtonHandler);  
+  // document
+  //   .querySelector('.item-list')
+  //   .addEventListener('click', delButtonHandler);  
 
     const signOut = async () => {
         const response = await fetch('/api/users/logout', {
@@ -73,5 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       };
       
-      document.querySelector('.signOut').addEventListener('click', logout);
+      // document.querySelector('.signOut').addEventListener('click', logout);
       
