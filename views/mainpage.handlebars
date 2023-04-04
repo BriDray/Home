@@ -30,14 +30,14 @@
                     <img src="\images\profile-banner.png">
                 </div>
                 <a href="#user"><img class="circle" src="\images\ProfileLogo.png"></a>
-                <a href="#name"><span class="white-text name">John Doe</span></a>
+                <a href="#name"><span class="white-text name">{{firstName}}</span></a>
                 <a href="#email"><span class="white-text email">User Email Goes Here</span></a>
             </div>
         </li>
-        <li><a href="#!"><i class="material-icons">home</i>View My Lists</a></li>
+        {{!-- <li><a href="#!"><i class="material-icons">home</i>View My Lists</a></li>
         <li>
             <div class="divider"></div>
-        </li>
+        </li> --}}
         <li><a class="subheader">My Account</a></li>
         <li><a href="#!"><i class="material-icons">person</i>Edit Profile</a></li>
         <li>
@@ -57,23 +57,14 @@
     </div>
     <ul class="collection with-header">
         <li class="collection-header">
-            <h4>John Doe's Home</h4>
+            <h4>{{firstName}}'s Home</h4>
         </li>
-        <li class="collection-item">
-            <div>Omen Laptop<a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-                <a href="#!" class="secondary-content"><i class="material-icons">highlight_off</i></a>
-            </div>
-        </li>
-        <li class="collection-item">
-            <div>Samsung Monitor<a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a>
-                <a href="#!" class="secondary-content"><i class="material-icons">highlight_off</i></a>
-            </div>
-        </li>
-        <li class="collection-item">
-            <div>Samsung Sound Bar<a href="#!" class="secondary-content"><i class="material-icons">mode_edit</i></a><a
-                    href="#!" class="secondary-content"><i class="material-icons">highlight_off</i></a>
-            </div>
-        </li>
+
+    {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
+     {{#each user.item as |item-name|}}
+    {{> list-items}}
+    {{/each}}
+        
     </ul>
 
     <!-- ADD NEW ITEM MODAL -->
