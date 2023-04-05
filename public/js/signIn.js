@@ -24,13 +24,6 @@ const loginFormHandler = async () => {
 };
  console.log("running");
 
-// event listener for sign in button to redirect to main page
-// signInButton.addEventListener("click", function(){
-//   console.log("click")
-//   loginFormHandler();
-//   document.location.href = '/';
-//   console.log("")
-// });
 
 signInButton.addEventListener('click', function(event){
   event.preventDefault();
