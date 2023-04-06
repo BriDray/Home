@@ -3,7 +3,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main page</title>
-    <script src="handlebars-v4.0.2.js">npm</script>
     <!-- Compiled and minified CSS documentation for Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -55,11 +54,11 @@
     </div>
     <ul class="collection with-header">
         <li class="collection-header">
-            <h4>{{name}}'s Home</h4>
+            <h4>{{user.name}}'s Home</h4>
         </li>
-
+        {{user}}
         {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
-        {{#each user.allItems as |item-name|}}
+        {{#each user.items as |item-name|}}
         {{> list-items}}
         {{/each}}
 
