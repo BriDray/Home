@@ -58,7 +58,7 @@
         </li>
 
         {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
-        {{#each user.item as |item-name|}}
+        {{#each user.allItems as |item-name|}}
         {{> list-items}}
         {{/each}}
 
