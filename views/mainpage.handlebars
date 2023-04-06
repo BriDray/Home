@@ -1,133 +1,108 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main page</title>
-    <!-- Compiled and minified CSS documentation for Materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="\css\mainpage.css">
-</head>
-
-<body>
-    {{#if logged_in}}
 
 
-    <!-- This is the Header of the page -->
-    <header class="header">
-        <div class="homeLogo">
-            <img src="\images\HOME.png" width="525px" height="135px">
-        </div>
-    </header>
-    <!-- POP OUT NAV/PROFILE CARD FROM MATERIALIZE -->
-    <ul id="slide-out" class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img src="\images\profile-banner.png">
-                </div>
-                <a href="#user"><img class="circle" src="\images\ProfileLogo.png"></a>
-                <a href="#name"><span class="white-text name">{{name}}</span></a>
-                <a href="#email"><span class="white-text email">{{email}}</span></a>
+<!-- This is the Header of the page -->
+<header class="header">
+    <div class="homeLogo">
+        <img src="\images\HOME.png" width="525px" height="135px">
+    </div>
+</header>
+<!-- POP OUT NAV/PROFILE CARD FROM MATERIALIZE -->
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="\images\profile-banner.png">
             </div>
-        </li>
-        {{!-- <li><a href="#!"><i class="material-icons">home</i>View My Lists</a></li>
-        <li>
-            <div class="divider"></div>
-        </li> --}}
-        <li><a class="subheader">My Account</a></li>
-        {{!-- <li><a href="#!"><i class="material-icons">person</i>Edit Profile</a></li> --}}
-        <li>
-            <div class="divider"></div>
-        </li>
-        <li>
-            <a href="/api/users/signOut" class="signOut"><i class="material-icons">settings_power</i>Sign Out</a>
-        </li>
-    </ul>
-    <!-- PROFILE/MENU BUTTON -->
-    <a class="waves-effect waves-light btn menuBtn" id="profile"><i class="material-icons">menu</i></a>
-    <!-- ADD NEW ITEM BUTTON/ MODAL TRIGGER -->
-    <a class="waves-effect waves-light btn modal-trigger addNewBtn" id="addNewBtn" href="#modal1"><i
-            class="material-icons">control_point</i>Add New Item</a>
-
-    <!-- LIST ITEMS --->
-    </div>
-    <ul class="collection with-header">
-        <li class="collection-header">
-            <h4>{{user.name}}'s Home</h4>
-        </li>
-        {{user}}
-        {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
-        {{#each user.items as |item-name|}}
-        {{> list-items}}
-        {{/each}}
-
-    </ul>
-
-    <!-- ADD NEW ITEM MODAL -->
-    <div class="row section">
-        <div class="col">
+            <a href="#user"><img class="circle" src="\images\ProfileLogo.png"></a>
+            <a href="#name"><span class="white-text name">{{name}}</span></a>
+            <a href="#email"><span class="white-text email">{{email}}</span></a>
         </div>
+    </li>
+    {{!-- <li><a href="#!"><i class="material-icons">home</i>View My Lists</a></li>
+    <li>
+        <div class="divider"></div>
+    </li> --}}
+    <li><a class="subheader">My Account</a></li>
+    {{!-- <li><a href="#!"><i class="material-icons">person</i>Edit Profile</a></li> --}}
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li>
+        <a href="/api/users/signOut" class="signOut"><i class="material-icons">settings_power</i>Sign Out</a>
+    </li>
+</ul>
+<div class="topBtns"></div>
+<!-- PROFILE/MENU BUTTON -->
+<a class="waves-effect waves-light btn menuBtn" id="profile"><i class="material-icons">menu</i></a>
+<!-- ADD NEW ITEM BUTTON/ MODAL TRIGGER -->
+<a class="waves-effect waves-light btn modal-trigger addNewBtn" id="addNewBtn" href="#modal1"><i
+        class="material-icons">control_point</i>Add New Item</a>
+</div>
+
+
+
+</ul>
+
+<!-- ADD NEW ITEM MODAL -->
+<div class="row section">
+    <div class="col">
     </div>
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-        <div class="row">
-            <form class="col s12 new-item-form">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="category" type="text" class="validate">
-                        <label for="category">Category</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="item_name" type="text" class="validate">
-                        <label for="item_name">Item Name</label>
-                    </div>
+</div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="row">
+        <form class="col s12 new-item-form">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="category" type="text" class="validate">
+                    <label for="category">Category</label>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="purchaseDate" type="text" class="validate">
-                        <label for="purchaseDate">Purchase Date</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="purchased_from" type="text" class="validate">
-                        <label for="purchased_from">Purchased From</label>
-                    </div>
+                <div class="input-field col s6">
+                    <input id="item_name" type="text" class="validate">
+                    <label for="item_name">Item Name</label>
                 </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="purchaseDate" type="text" class="validate">
+                    <label for="purchaseDate">Purchase Date</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="purchased_from" type="text" class="validate">
+                    <label for="purchased_from">Purchased From</label>
+                </div>
+            </div>
+            {{!-- <div class="row">
+                <div class="input-field col s12">
+                    <input id="serialNumber" type="text" class="validate">
+                    <label for="serialNumber">Serial Number</label>
+                </div> --}}
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="serialNumber" type="text" class="validate">
-                        <label for="serialNumber">Serial Number</label>
+                        <input id="cost" type="text" class="validate">
+                        <label for="cost">Item Cost When Purchased</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="cost" type="text" class="validate">
-                            <label for="cost">Item Cost When Purchased</label>
-                        </div>
-                        <div class="modal-footer">
-                            <!-- ADD NEW ITEM BUTTON/CLOSE MODAL -->
-                            <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn"
-                                id="addItemBtn">Add Item</a>
-                        </div>
+                    <div class="modal-footer">
+                        <!-- ADD NEW ITEM BUTTON/CLOSE MODAL -->
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-light btn addItemBtn"
+                            id="addItemBtn">Add Item</a>
                     </div>
                 </div>
-            </form>
-        </div>
-        <!-- JQUERY -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="/js/mainpage.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        {{!--
-        <script src="../public/js/mainpage.js"></script> --}}
-        <!-- MODAL TRIGGER JS CODE -->
-        <script>
-            $(document).ready(function () {
-                $('.modal').modal();
-            });
-        </script>
-        {{else}}
-        <a href="/signInPage">login</a>
-        {{/if}}
-</body>
-
-</html>
+                {{!--
+            </div> --}}
+        </form>
+    </div>
+    <!-- JQUERY -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/js/mainpage.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- MODAL TRIGGER JS CODE -->
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+    {{else}}
+    <a href="/signInPage">login</a>
+    {{/if}}
