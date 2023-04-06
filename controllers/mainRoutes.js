@@ -9,7 +9,7 @@ router.get('/signInPage', (req, res) => {
     return;
   }
 
-  res.render('signInPage');
+  res.render('SignInPage');
 });
 
 module.exports = router;
