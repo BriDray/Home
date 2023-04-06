@@ -36,17 +36,6 @@
 <a class="waves-effect waves-light btn modal-trigger addNewBtn" id="addNewBtn" href="#modal1"><i
         class="material-icons">control_point</i>Add New Item</a>
 </div>
-<!-- LIST ITEMS --->
-</div>
-<ul class="collection with-header">
-    <li class="collection-header">
-        <h4>{{user.name}}'s Home</h4>
-    </li>
-      {{!-- ADD LOOP HERE GENERATE PARTIAL TO CREATE LIST--}}
-    {{#each user.items as |item-name|}}
-    {{> list-items}}
-    {{/each}}
-</ul>
 
 <!-- ADD NEW ITEM MODAL -->
 <div class="row section">
@@ -69,13 +58,14 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="purchaseDate" type="text" class="validate">
-                    <label for="purchaseDate">Purchase Date</label>
+                    <input id="purchase_date" type="text" class="validate">
+                    <label for="purchase_date">Purchase Date</label>
                 </div>
                 <div class="input-field col s6">
                     <input id="purchased_from" type="text" class="validate">
                     <label for="purchased_from">Purchased From</label>
                 </div>
+    
             </div>
             {{!-- <div class="row">
                 <div class="input-field col s12">
@@ -84,8 +74,8 @@
                 </div> --}}
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="cost" type="text" class="validate">
-                        <label for="cost">Item Cost When Purchased</label>
+                        <input id="purchase_price" type="text" class="validate">
+                        <label for="purchase_price">Item Cost When Purchased</label>
                     </div>
                     <div class="modal-footer">
                         <!-- ADD NEW ITEM BUTTON/CLOSE MODAL -->

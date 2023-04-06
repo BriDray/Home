@@ -13,18 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#item-name').value.trim();
+    const name = document.querySelector('#item_name').value.trim();
     const category = document.querySelector('#category').value.trim();
     const purchase_date = document.querySelector('#purchase_date').value.trim();
     const purchased_from = document.querySelector('#purchased_from').value.trim();
     const purchase_price = document.querySelector('#purchase_price').value.trim();
-    const item_value = document.querySelector('#item_value').value.trim();
     
   
-    if (name && category && purchase_date && purchased_from && purchase_price && item_value) {
+    if (name && category && purchase_date && purchased_from && purchase_price) {
       const response = await fetch(`/`, {
         method: 'POST',
-        body: JSON.stringify({ name, purchase_date, purchase_price, item_value, category }),
+        body: JSON.stringify({ name, category, purchase_date, purchase_price }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -55,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   
   document
-    .querySelector('.new-item-form')
-    .addEventListener('submit', newFormHandler);
+    .querySelector('#addItemBtn')
+    .addEventListener('click', newFormHandler);
   
   // document
   //   .querySelector('.item-list')
