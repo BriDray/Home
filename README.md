@@ -54,6 +54,5 @@ Home is an app that is meant to help the user keep their personal belonging info
 * Ability to add list items and their corresponding details to a file to be shared with others, and/or to send list via email.
 
 # Questions
-Hi, Thanks for checking out our Project: noted! If you have any questions about our project, please E-mail us [HERE!](mailto:) 
-Coming soon!
+Hi, Thanks for checking out our Project: noted! If you have any questions about our project, please E-mail us [HERE!](mailto:homedatabaseapplication@gmail.com) Coming soon!
 
