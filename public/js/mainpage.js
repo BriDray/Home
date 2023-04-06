@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   
     if (name && category && purchase_date && purchased_from && purchase_price) {
-      const response = await fetch(`/`, {
+      const response = await fetch(`/api/itemRoutes`, {
         method: 'POST',
         body: JSON.stringify({ name, category, purchase_date, purchase_price }),
         headers: {

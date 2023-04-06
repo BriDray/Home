@@ -25,7 +25,7 @@ router.get('/mainPage', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('mainPage', {
+    res.render('mainpage', {
       ...user,
       logged_in: true
     });
@@ -52,7 +52,7 @@ router.get('/', withAuth, async (req, res) => {
     const user = userItemsData.get({ plain: true });
     
     // Pass serialized data and session flag into template
-      res.render('mainPage', {
+      res.render('mainpage', {
          user,
         logged_in: req.session.logged_in
       });
@@ -93,7 +93,7 @@ router.get('/SignUpPage', (req, res) => {
     return;
   }
 
-  res.render('SignUpPage');
+  res.render('signUpPage');
 });
 
 
