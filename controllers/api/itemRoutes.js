@@ -4,6 +4,8 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
     try {
+      console.log(req.body);
+      console.log(req.session.user_id);
       const newItem = await Item.create({
         ...req.body,
         user_id: req.session.user_id,
@@ -11,6 +13,7 @@ router.post('/', withAuth, async (req, res) => {
   
       res.status(200).json(newItem);
     } catch (err) {
+      console.log(err);
       res.status(400).json(err);
     }
   });

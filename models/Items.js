@@ -17,11 +17,10 @@ Item.init(
     },
     category: {
       type: DataTypes.STRING,
-      primaryKey: true,
       allowNull: false,
     },
     purchase_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     purchased_from: {
@@ -35,7 +34,7 @@ Item.init(
     },
     value: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -44,7 +43,7 @@ Item.init(
         key: 'id',
       },
     },
-  },
+    },
   {
     sequelize,
     freezeTableName: false,
