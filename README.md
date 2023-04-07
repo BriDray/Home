@@ -24,14 +24,10 @@ Home is an application to help the user better track their personal belongings. 
 # Description
 Home is an app that is meant to help the user keep their personal belonging information in one place; in case of the need for an insurance claim.
 
-![Home Project Screenshot](assets\screenshots\landing(83).png?raw=true "Home1")
-
-![Home Project Screenshot](assets\screenshots\landing(85).png?raw=true "Home2")
-
-![Home Project Screenshot](assets\screenshots\landing(86).png?raw=true "Home3")
+![Home Project Screenshot](/public/images/signinshot.png?raw=true "Home1")
 
 # Github Link
-[View The Home Project Deployment Here!](coming soon)
+[View The Home Project Deployment Here!](https://myhome.herokuapp.com/SignInPage)
 
 # Motivation for Development
 "After personal experience, Having to make a major claim with my insurance due to a Break in. I learned what the insurance companies required in order for them to approve a claim. I remember being stressed about missing something major. it would have been really nice to have an app that could have logged my items beforehand. Hopefully this will help someone else be prepared for the unthinkable." -Bri Dray
